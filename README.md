@@ -1,5 +1,5 @@
 # qcm-cbf
-An implementation of the robot navigation using Quasi-conformal Mappings (QCM) and Control Barrier Functions (CBF) approach described in [Notomista, Choi, and Saveriano, 2024](https://www.sciencedirect.com/science/article/pii/S0921889023001495](https://arxiv.org/abs/2411.14908).
+An implementation of the robot navigation using Quasi-conformal Mappings (QCM) and Control Barrier Functions (CBF) approach described in [Notomista, Choi, and Saveriano, 2024](https://arxiv.org/abs/2411.14908).
 
 ## Demos description
 - `main_.m`: a demo to run QCM-CBF ... .
