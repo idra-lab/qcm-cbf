@@ -11,12 +11,12 @@ The code is developed and tested under `Matlab2023b`.
 Please acknowledge the authors in any academic publication that used parts of these codes.
 ```
 @article{Notomista2023Reactive,
-  title={ILearning stable robotic skills on Riemannian manifolds},
-  author = {Matteo Saveriano and Fares J. Abu-Dakka and Ville Kyrki},
-journal = {Robotics and Autonomous Systems},
-volume = {169},
-pages = {104510},
-year = {2023}
+  title={Reactive Robot Navigation Using Quasi-conformal Mappings and Control Barrier Functions},
+  author = {Gennaro Notomista and Gary P. T. Choi and Matteo Saveriano},
+journal = {IEEE Transactions on Control Systems Technology},
+volume = {},
+pages = {},
+year = {2024 (to appear)}
 }
 ```
 
