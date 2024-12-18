@@ -2,7 +2,12 @@
 An implementation of the robot navigation using Quasi-conformal Mappings (QCM) and Control Barrier Functions (CBF) approach described in [Notomista, Choi, and Saveriano, 2024](https://arxiv.org/abs/2411.14908).
 
 ## Demos description
-- `main_.m`: a demo to run QCM-CBF ... .
+- `demo_one_obstacle.m`: a demo to run QCM-CBF (full mapping) to avoid a single obstacle.
+- `demo_full_qc_incremental.m`: a demo to run QCM-CBF (full mapping) to avoid a two obstacles dynamically added to the workspace.
+- `demo_partial_qc_incremental.m`: a demo to run QCM-CBF (partial mapping) to avoid a two obstacles dynamically added to the workspace.
+- `demo_pan_tilt_camera.m`: a demo to run QCM-CBF (full mapping) to avoid unsafe regions observed by a Pan-Tilt camera.
+- `demo_office_navigation.m`: a demo to run QCM-CBF (full mapping) to avoid collisions in a complex office space.
+
 
 ## Software Requirements
 The code is developed and tested under `Matlab2023b`.
@@ -19,11 +24,6 @@ pages = {},
 year = {2024 (to appear)}
 }
 ```
-
-## Third-party material
-Third-party code and dataset have been included in this repository for convenience.
-
-- **LASA Handwriting dataset**: please acknowledge the authors in any academic publications that have made use of the LASA HandWriting dataset by citing: *S. M. Khansari-Zadeh and A. Billard, "Learning Stable Non-Linear Dynamical Systems with Gaussian Mixture Models", IEEE Transaction on Robotics, 2011*.
 
 ## Note
 This source code is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
