@@ -31,10 +31,6 @@ myColors{4} = [0.4940 0.1840 0.5560];
 myColors{3} = [0.4660 0.6740 0.1880];
 myColors{5} = [0 0.4470 0.7410]; % Default blue
 
-% create the video writer with 1 fps
-writerObj = VideoWriter('myVideo.avi');
-writerObj.FrameRate = 30;
-
 % build-up world
 realWorld.domain.type = 'qc';
 realWorld.domain.contour = 2.5*[-1 1 1 -1;
@@ -250,14 +246,3 @@ for t = 1 : T_MAX
     F(t) = getframe(gcf);
     drawnow
 end
-
-% open the video writer
-open(writerObj);
-% write the frames to the video
-for i=1:length(F)
-    % convert the image to a frame
-    frame = F(i) ;    
-    writeVideo(writerObj, frame);
-end
-% close the writer object
-close(writerObj);
