@@ -22,7 +22,7 @@ ALL_IN_BALL = true;
 DT = 0.001;
 T_MAX = 1e4;
 POSITION_RADIUS = 'equal'; % 'move' or 'radius' or 'equal'
-LAMBDA = 3e4;
+LAMBDA = 5e4; % LAMBDA should be big enough to ensure proper mapping
 
 % build-up world
 realWorld.domain.type = 'qc';
@@ -32,16 +32,10 @@ realWorld.domain.goal = [0;-5];
 ballWorld.domain.center = [0;0];
 ballWorld.domain.radius = 5;
 ballWorld.domain.goal = realWorld.domain.goal;
-real_obstacle_contours{1} = [-0.65; -0.75] + 0.5*[-1 1 1 -1 -1; 1 1 -1 -1 1];%[0.65; 0.15] + 0.5*[1 -1 0 1; 0 0 1 0];
-real_obstacle_contours{2} = [0.65; 0.15] + 0.5*[1 -1 0 1; 0 0 1 0];%[-0.65; -0.75] + 0.5*[-1 1 1 -1 -1; 1 1 -1 -1 1];
+real_obstacle_contours{1} = [-0.65; -0.75] + 0.25*[-1 1 1 -1 -1; 1 1 -1 -1 1];%[0.65; 0.15] + 0.5*[1 -1 0 1; 0 0 1 0];
+real_obstacle_contours{2} = [0.65; 0.15] + 0.25*[1 -1 0 1; 0 0 1 0];%[-0.65; -0.75] + 0.5*[-1 1 1 -1 -1; 1 1 -1 -1 1];
 ball_obstacle_centers{1} = [-0.8;-1.25];%[0.5;0.75];
 ball_obstacle_centers{2} = [0.5;0.75];%[-0.8;-1.25];
-
-% real_obstacle_contours{1} = [0.65; 0.15] + 0.5*[-1 1 0 -1; 0 0 1 0];
-% real_obstacle_contours{2} = [-0.35; -0.75] + 0.5*[-1 1 1 -1 -1; -1 -1 1 1 -1];
-% ball_obstacle_centers{1} = [0.5;0.75];
-% ball_obstacle_centers{2} = [-0.8;-1.25];
-
 ball_obstacle_radii{1} = 0.9;
 ball_obstacle_radii{2} = 0.75;
 obstacle_encountered = false(numel(real_obstacle_contours),1);
